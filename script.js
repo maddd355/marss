@@ -10,4 +10,3 @@ function message() {
   }
   request.send(JSON.stringify(params));
 }
-}
