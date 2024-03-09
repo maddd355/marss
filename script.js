@@ -1,5 +1,4 @@
 function message() {
-  document.write("went through");
   let name = document.getElementById("name").value;
   let message = document.getElementById("message").value;
   const webhook = 
