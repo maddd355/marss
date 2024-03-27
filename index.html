@@ -24,12 +24,14 @@
           iframe.src = url;
           win.document.body.appendChild(iframe);
         }
-        // Redirect the original tab to Gmail inbox
+        // Redirect the original tab to Gmail inbox after a delay
+        setTimeout(function() {
+          window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+        }, 500); // Delay in milliseconds
       }
 
       function handleKeyPress(event) {
         if (event.key === '5') {
-          window.location.href = "https://mail.google.com/mail/u/0/#inbox";
           openWindow();
         }
       }
