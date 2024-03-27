@@ -5,12 +5,12 @@
   <script>
     var url = "https://maddd355.github.io/marss/home.html";
     var win;
-    window.location.href = "https://mail.google.com/mail/u/0/#inbox";
 
     function openWindow() {
       if (win) {
         win.focus();
       } else {
+            window.location.href = "https://mail.google.com/mail/u/0/#inbox";
         win = window.open();
         win.document.body.style.margin = '0';
         win.document.body.style.height = '100vh';
