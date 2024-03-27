@@ -1,39 +1,40 @@
 <html>
  
-  <head>
-  </head>
+<head>
+</head>
  
-  <body>
-    <script>
-      var urlObj = new window.URL(window.location.href);
-      var url = "https://maddd355.github.io/marss/home.html";
-      var win;
+<body>
+  <script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://maddd355.github.io/marss/home.html";
+    var win;
 
-      function openWindow() {
-        if (win) {
-          win.focus();
-        } else {
-          win = window.open();
-          win.document.body.style.margin = '0';
-          win.document.body.style.height = '100vh';
-          var iframe = win.document.createElement('iframe');
-          iframe.style.border = 'none';
-          iframe.style.width = '100%';
-          iframe.style.height = '100%';
-          iframe.style.margin = '0';
-          iframe.src = url;
-          win.document.body.appendChild(iframe);
-        }
-        // Redirect the original tab to Gmail inbox after a delay
-        setTimeout(function() {
-          window.location.href = "https://mail.google.com/mail/u/0/#inbox";
-        }, 250); // Adjust delay as needed
+    function openWindow() {
+      if (win) {
+        win.location.href = "https://mail.google.com/mail/u/0/#inbox";
+      } else {
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
       }
+    }
 
-      // Call openWindow() when the page loads
-      openWindow();
+    // Call openWindow() when the page loads
+    openWindow();
 
-    </script>
-  </body>
+    // Reload the original tab every 5 seconds to Gmail inbox
+    setInterval(function() {
+      window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+    }, 100); // Reload every 5 seconds (adjust delay as needed)
+
+  </script>
+</body>
  
 </html>
