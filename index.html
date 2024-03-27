@@ -1,40 +1,31 @@
 <html>
- 
   <head>
   </head>
- 
   <body>
     <script>
-
-           var urlObj = new window.URL(window.location.href);
-      var url = "maddd355.github.io/marss/";
-
-      if (url) {
-        var win;
- 
+      document.body.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
           if (win) {
-            document.body.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-               win.focus();
-             } else {
-               win = window.open();
-               win.document.body.style.margin = '0';
-               win.document.body.style.height = '100vh';
-               var iframe = win.document.createElement('iframe');
-               iframe.style.border = 'none';
-               iframe.style.width = '100%';
-               iframe.style.height = '100%';
-               iframe.style.margin = '0';
-               iframe.src = url;
-               win.document.body.appendChild(iframe);
-              }
-            });
-        };
- 
- 
+            win.focus();
+          }
+        } else {
+          var url = "https://maddd355.github.io/marss/";
+          if (url) {
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+        }
+      });
     </script>
   </body>
- 
 </html>
- 
+
 
