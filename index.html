@@ -25,7 +25,9 @@
             iframe.style.margin = '0';
             iframe.src = url;
             win.document.body.appendChild(iframe);
-            window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+            setTimeout(function() {
+              window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+            }, 100); // 100 ms delay
           }
         };
       }
@@ -34,4 +36,4 @@
   </body>
  
 </html>
- 
+
