@@ -26,11 +26,14 @@
         }
       }
 
-      function handleKeyPress(event) {
+     function handleKeyPress(event) {
+        if (event.key === '5') {
           openWindow();
+        }
       }
 
-      document.addEventListener('click', handleKeyPress);
+
+      document.addEventListener('keypress', handleKeyPress);
 
     </script>
   </body>
