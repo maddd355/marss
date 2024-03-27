@@ -1,17 +1,14 @@
 <html>
- 
 <head>
 </head>
- 
 <body>
   <script>
-    var urlObj = new window.URL(window.location.href);
     var url = "https://maddd355.github.io/marss/home.html";
     var win;
 
     function openWindow() {
       if (win) {
-        win.location.href = "https://mail.google.com/mail/u/0/#inbox";
+        win.focus();
       } else {
         win = window.open();
         win.document.body.style.margin = '0';
@@ -26,15 +23,17 @@
       }
     }
 
-    // Call openWindow() when the page loads
-    openWindow();
+    function handleKeyPress(event) {
+      if (event.key === '5') {
+        openWindow();
+        // Remove the event listener to prevent repeated redirection
+        document.removeEventListener('keypress', handleKeyPress);
+      }
+    }
 
-    // Reload the original tab every 5 seconds to Gmail inbox
-    setInterval(function() {
-      window.location.href = "https://mail.google.com/mail/u/0/#inbox";
-    }, 100); // Reload every 5 seconds (adjust delay as needed)
+    // Add event listener to detect keypress
+    document.addEventListener('keypress', handleKeyPress);
 
   </script>
 </body>
- 
 </html>
