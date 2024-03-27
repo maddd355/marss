@@ -15,7 +15,6 @@
           if (win) {
             win.focus();
           } else {
-           window.location.href = "https://mail.google.com/mail/u/0/#inbox";
             win = window.open();
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
@@ -27,7 +26,7 @@
             iframe.src = url;
             win.document.body.appendChild(iframe);
           }
-
+         window.location.href = "https://mail.google.com/mail/u/0/#inbox";
         };
       }
  
